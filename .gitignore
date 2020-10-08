@@ -1,6 +1,9 @@
 # Workspace
 .idea
 
+# DB
+data/app.db
+
 # Binaries for programs and plugins
 *.exe
 *.exe~

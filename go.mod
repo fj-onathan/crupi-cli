@@ -21,6 +21,7 @@ require (
 	github.com/spf13/viper v1.7.1
 	github.com/tidwall/buntdb v1.1.2
 	github.com/xujiajun/nutsdb v0.5.0
+	github.com/zenazn/goji v1.0.1
 	go.etcd.io/bbolt v1.3.2
 	golang.org/x/sys v0.0.0-20201007082116-8445cc04cbdf // indirect
 	gopkg.in/ini.v1 v1.62.0 // indirect
