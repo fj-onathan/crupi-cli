@@ -5,6 +5,7 @@ import (
 	"log"
 )
 
+// Local database created by Bolt
 var Local *bolt.DB
 
 func init() {

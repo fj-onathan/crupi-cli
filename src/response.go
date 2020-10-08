@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// InlineResponse: Print a status inline message
 func InlineResponse(designation, msg string, highlight ...string) {
 	dColor := color.FgLightGreen.Render
 	hColor := color.FgDarkGray.Render
@@ -25,6 +26,7 @@ func InlineResponse(designation, msg string, highlight ...string) {
 	fmt.Printf("%s: %v %v \n", dColor(strings.ToUpper(designation)), msg, defaultHighlight)
 }
 
+// InlineItems: Do a loop thought items and print
 func InlineItems(designation string, items []string) {
 	dColor := color.FgDarkGray.Render
 	designation = "List of " + designation + ":"

@@ -9,6 +9,7 @@ import (
 
 const crudBucket = "CRUDS"
 
+// Crud: data for main crud system
 type Crud struct {
 	ID   int
 	Name string
@@ -25,6 +26,7 @@ func init() {
 	})
 }
 
+// AddCrud: Adding new crud to local database
 func (c *Crud) AddCrud() {
 	db.Local.Update(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(crudBucket))
@@ -42,6 +44,7 @@ func (c *Crud) AddCrud() {
 	})
 }
 
+// ListCrud: List all cruds saved on local database
 func ListCruds() []string {
 	var crudsList []string
 	db.Local.View(func(tx *bolt.Tx) error {
@@ -59,6 +62,7 @@ func ListCruds() []string {
 	return crudsList
 }
 
+// IfExistCrud: Check if exist already some crud created
 func IfExistCrud(name string) bool {
 	ls := ListCruds()
 	for _, item := range ls {
